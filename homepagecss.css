@@ -1,0 +1,386 @@
+body{
+    padding: 0;
+    margin: 0;
+    background: url(https://i.ytimg.com/vi/UtSZRYRezxE/maxresdefault.jpg);
+    background-size: cover;
+}
+.more input{
+    /*-webkit-appearance:none;*/
+}
+.more .button1{
+    width: 100px;
+    margin-left: 90%;
+    margin-top: 20px;
+  margin-bottom:50px;
+    font-family: arial;
+    font-size: 18px;
+    font-weight: bold;
+    color: #262626;
+    padding:15px;
+    border:2px solid #262626;
+    text-align: center;
+    border-radius: 50px;
+    transition: .5s;
+    cursor: pointer;
+}
+.more .button1:hover{
+    background: #262626;
+    color: #fff;
+}
+.more .button2{
+    position: relative;
+    width: 100px;
+    padding-top: 30px;
+    margin-left: 50%;
+    color:#fff;
+    z-index: 1;
+    font-size: 40px;
+    cursor: pointer;
+}
+.top-boxes{
+    color: #fff;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 80%;
+    margin-left: 20%;
+}
+.top-box-1 , .top-box-2{
+    padding: 50px;
+    font-size: 20px;
+}
+.top{
+    width: 100%;
+    height: 360px;
+    background-color: #000;
+    display: grid;
+    grid-template-columns: 4fr 1fr;
+    position: absolute;
+    transform: translateY(-510px);
+    transition: .5s;
+}
+.more input[type="checkbox"]{
+    -webkit-appearance:none;
+}
+.more input[type="checkbox"]:checked ~ .top{
+    transform: translateY(-150px);
+}
+/*==================================================================*/
+
+.all{
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 5fr;
+    grid-gap: 50px;
+}
+.page-left{
+    padding: 20px;
+    width: 100%;
+}
+.logo{
+    margin: 0 auto;
+    width:100px;
+    height: 70px;
+    background: url(https://novarademo.files.wordpress.com/2017/08/novara-logo.png);
+    background-size: cover;
+}
+.page-name{
+    font-size: 35px;
+    font-family: verdana;
+    width: 30px;
+    text-align: center;
+    margin: 0 30%;
+}
+.page-info{
+    width: 100px
+    font-size: 14px;
+    margin: 0 30%;
+    text-align: center;
+    color: rgba(0,0,0,.5)
+}
+.line{
+    background-color: #262626;
+    margin: 10px 43% 30px 43%;
+    width: 50px;
+    height:4px;
+}
+.menu{
+    width: 80%;
+}
+.menu li{
+    position: relative;
+    list-style: none;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    border-bottom: 1px solid rgba(0,0,0,.2)
+}
+.menu a{
+    color: #262626;
+    text-decoration: none;
+    font-size: 19px;
+    font-family: sans-serif;
+    padding-left:12px;
+    margin-bottom: 20px;
+    border-left: 1px solid rgba(0,0,0,.3)
+}
+.menu a:hover{
+    border-left: 2px solid rgba(0,0,0,.9)
+}
+.menu ul li ul{
+    display: none;
+}
+.menu ul ul li a,.menu ul ul li{
+    border:none;
+    margin: 0;
+    padding: 0;
+    transition: .5s;
+}
+.menu ul ul li{
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+.menu ul ul a:hover{
+    border: none;
+    text-decoration: underline;
+}
+.menu ul li:hover ul{
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 100%;
+    width: 150px;
+    background-color: #fff;
+}
+
+/*==================================================================*/
+.page-right{
+    cursor: pointer;
+    display: grid;
+    margin-left: 20px;
+    box-shadow: 0px 0px 50px rgba(0,0,0,1);
+    width: 95%;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 
+        "page-right-box-1 page-right-box-1"
+        "page-right-box-2 page-right-box-3"
+        "page-right-box-4 page-right-box-5"
+        "page-right-box-6 page-right-box-7"
+        "page-right-box-8 page-right-box-9"
+}
+.page-right-box-1{
+    grid-area: page-right-box-1;
+    width: 100%;
+    height: 700px;
+    background: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s
+}
+.page-right-box-1:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.page-right-box-2{
+    grid-area: page-right-box-2;
+    width: 100%;
+    height: 400px;
+    background: url(https://novarademo.files.wordpress.com/2017/03/building.jpg?w=594);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s;
+}
+.page-right-box-2:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.page-right-box-3{
+    grid-area: page-right-box-3;
+    width: 100%;
+    height: 400px;
+    background: url(https://novarademo.files.wordpress.com/2017/03/boats1.jpg?w=594);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s;
+}
+.page-right-box-3:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.page-right-box-4{
+    grid-area: page-right-box-4;
+    width: 100%;
+    height: 400px;
+    background: url(https://novarademo.files.wordpress.com/2017/03/aerial.jpg?w=594);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s
+}
+.page-right-box-4:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.page-right-box-5{
+    grid-area: page-right-box-5;
+    width: 100%;
+    height: 400px;
+    background: url(https://novarademo.files.wordpress.com/2017/03/trees.jpg?w=594);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s
+}
+.page-right-box-5:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.page-right-box-6{
+    grid-area: page-right-box-6;
+    width: 100%;
+    height: 400px;
+    background: url(https://novarademo.files.wordpress.com/2017/03/clouds.jpg?w=594);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s
+}
+.page-right-box-6:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.page-right-box-7{
+    grid-area: page-right-box-7;
+    width: 100%;
+    height: 400px;
+    background: url(https://novarademo.files.wordpress.com/2017/03/street1.jpg?w=594);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s
+}
+.page-right-box-7:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.page-right-box-8{
+    grid-area: page-right-box-8;
+    width: 100%;
+    height: 400px;
+    background: url(https://novarademo.files.wordpress.com/2017/03/big-hole.jpg?w=594);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s
+}
+.page-right-box-8:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.page-right-box-9{
+    grid-area: page-right-box-9;
+    width: 100%;
+    height: 400px;
+    background: url(https://novarademo.files.wordpress.com/2017/03/exposure.jpg?w=594);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: .2s
+}
+.page-right-box-9:hover{
+    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
+}
+.name{
+    margin-top: 22px;
+    color: #ccc;
+    display: block;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-weight: bold;
+    font-size: 15px;
+    font-family: arial;
+    font-weight: normal;
+    float: left;
+    padding-bottom: 20px;
+}
+.avatar{
+    margin-left: 15px;
+    margin-top:15px;
+    width: 40px;
+    height: 40px;
+    float: left;
+    background: url(https://secure.gravatar.com/avatar/005e9a9f411ec6af6cddb49b6067542e?s=100&r=pg&d=mm);
+    background-size: cover;
+    border-radius: 50%;
+}
+.date{
+    color: #fff;
+    font-size: 13px;
+    color: rgba(255,255,255,.5);
+    font-family: verdana;
+    margin-top: 21px;
+    padding-left: 20px;
+    float: left;
+    width: 100px;
+    border-left: 1px solid rgba(255,255,255,.5)
+}
+.image-name{
+    display: block;
+    width: 150px;
+    margin-left: 30px;
+    margin-top: 20px;
+    color: #d9d9d9;
+    font-size: 30px;
+    font-family: sans-serif;
+    font-weight: bold;
+    text-shadow: 0px 0px 30px #000
+}
+.search{
+    margin-top: 30px;
+    margin-left:40px;
+}
+.search input{
+    margin-left: 50px;
+    width: 250px;
+    height: 36px;
+    border:1px solid rgba(0,0,0,.6);
+    outline: none;
+    color: #262626;
+    background: transparent;
+    font-size: 20px;
+    font-family: vardana;
+    border-radius: 25px;
+    padding-left: 30px;
+}
+.search .fas{
+    margin-right: -80px;
+    font-size: 20px;
+    color: rgba(0,0,0,.5);
+}
+
+footer{
+    margin-top: 50px;
+    width: 100%;
+    height: 100px;
+    background: #262626;
+}
+.social{
+    color: #ccc;
+    width:120px;
+    padding-top: 20px;
+    margin: 0 auto;
+    font-size: 20px;
+    cursor: pointer;
+}
+.social .fab{
+    padding-left: 10px;
+    padding-right: 10px;
+    transform: scale(1);
+    transition: .5s;
+}
+.social .fab:hover{
+    transform: scale(1.5);
+}
+.footer-text{
+    color: #ccc;
+    width:800px;
+    font-size: 16px;
+    font-family: sans-serif;
+    padding-top: 20px;
+    margin: 0 auto;
+    text-align: center;
+}
