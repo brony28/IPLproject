@@ -1,0 +1,118 @@
+body {
+    background-color: #dd891a;
+    text-align: center;
+    font-family: sans-serif;
+    margin: 0 auto;
+    padding: 0;
+    color: #9397a3;
+}
+
+.container {
+    background-color: #272A2F;
+    padding: 25px 25px;
+    border-radius: 5px;
+    width: 320px;
+    height: 360px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+.logo {
+    width: 85%;
+    height: 120px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.title {
+    color: #9397a3;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.email,
+.password {
+    content: "rest";
+    border-bottom: 2px solid #9397a3;
+    border-right: 0;
+    border-left: 0;
+    border-top: 0;
+    border-radius: 0;
+    background: none;
+    width: 300px;
+    height: 40px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #34B45F;
+    outline: none;
+}
+
+.button {
+    color: white;
+    background-color: #34B45F;
+    width: 320px;
+    height: 40px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    outline: none;
+}
+
+.checkbox,
+label {
+    float: left;
+    font-size: 15px;
+}
+
+.forgot {
+    float: right;
+    font-size: 15px;
+    color: #34B45F;
+}
+
+
+/*** custom checkboxes ***/
+
+input[type=checkbox] {
+    display: none;
+}
+
+
+/* to hide the checkbox itself */
+
+input[type=checkbox]+label:before {
+    font-family: FontAwesome;
+    display: inline-block;
+}
+
+input[type=checkbox]+label:before {
+    content: "\f096";
+}
+
+
+/* unchecked icon */
+
+input[type=checkbox]+label:before {
+    letter-spacing: 5px;
+}
+
+
+/* space between checkbox and label */
+
+input[type=checkbox]:checked+label:before {
+    content: "\f046";
+}
+
+
+/* checked icon */
+
+input[type=checkbox]:checked+label:before {
+    letter-spacing: 3px;
+}
