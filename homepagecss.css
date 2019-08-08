@@ -1,7 +1,7 @@
 body{
     padding: 0;
     margin: 0;
-    background: url(https://i.ytimg.com/vi/UtSZRYRezxE/maxresdefault.jpg);
+    background: cyan;
     background-size: cover;
 }
 .more input{
@@ -165,13 +165,15 @@ body{
         "page-right-box-2 page-right-box-3"
         "page-right-box-4 page-right-box-5"
         "page-right-box-6 page-right-box-7"
-        "page-right-box-8 page-right-box-9"
+        
+
 }
 .page-right-box-1{
     grid-area: page-right-box-1;
     width: 100%;
     height: 700px;
-    background: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&h=750&w=1260);
+    /*background: url(https://images.pexels.com/photos/36717/amazing-animal-beautiful-beautifull.jpg?auto=compress&cs=tinysrgb&h=750&w=1260);*/
+    background-image: url(attendance.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -258,32 +260,7 @@ body{
 .page-right-box-7:hover{
     box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
 }
-.page-right-box-8{
-    grid-area: page-right-box-8;
-    width: 100%;
-    height: 400px;
-    background: url(https://novarademo.files.wordpress.com/2017/03/big-hole.jpg?w=594);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: .2s
-}
-.page-right-box-8:hover{
-    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
-}
-.page-right-box-9{
-    grid-area: page-right-box-9;
-    width: 100%;
-    height: 400px;
-    background: url(https://novarademo.files.wordpress.com/2017/03/exposure.jpg?w=594);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    transition: .2s
-}
-.page-right-box-9:hover{
-    box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
-}
+
 .name{
     margin-top: 22px;
     color: #ccc;
