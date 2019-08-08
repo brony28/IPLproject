@@ -65,21 +65,21 @@
   /* Create two unequal columns that sits next to each other */
   /* Sidebar/left column */
   .side {
-    flex: 30%;
+    flex: 66%;
     background-color: #f1f1f1;
     padding: 20px;
   }
   
   /* Main column */
   .main {   
-    flex: 70%;
-    background-color: white;
+    flex: 34%;
+    background-color: rgb(160, 160, 160);
     padding: 20px;
   }
   
   /* Fake image, just for this example */
   .fakeimg {
-    background-color: #aaa;
+    background-color: rgb(185, 185, 185);
     width: 100%;
     padding: 20px;
   }
@@ -132,7 +132,7 @@
   <a href="#">Home</a>
   <a href="#">Subjects</a>
   <a href="#">Analysis</a>
-  <a href="#" class="right">Logout</a>
+  <a href="loginpage.html" class="right">Logout</a>
 </div>
 
 <div class="row">
@@ -148,12 +148,37 @@
     <div class="fakeimg" style="height:60px;">Image</div>
   </div>
   <div class="main">
-    <h2>TITLE HEADING</h2>
+    <h2>Overall Attendance</h2>
     <h5>Title description, Dec 7, 2017</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
-    <br>
+    <div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+
+// Draw the chart and set the chart values
+function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Task', 'Hours per Day'],
+  ['ADMT', 10],
+  ['IP', 2],
+  ['CNS', 4],
+  ['ADSA', 2],
+  ['MEP', 8]
+]);
+
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Attendance', 'width':410, 'height':320};
+
+  // Display the chart inside the <div> element with id="piechart"
+  var chart = new google.visualization.PieChart(document.getElementById('piechart'));
+  chart.draw(data, options);
+}
+</script>
+<br>
     <h2>TITLE HEADING</h2>
     <h5>Title description, Sep 2, 2017</h5>
     <div class="fakeimg" style="height:200px;">Image</div>
@@ -170,9 +195,12 @@
   <a href="#"><i class="fa fa-linkedin"></i></a>
   <a href="#"><i class="fa fa-instagram"></i></a>
   <p>
-  Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">F.C.R.I.T</a>
+  Powered by <a href="https://www.fcrit.ac.in" target="_blank">F.C.R.I.T</a>
   </p>
 </div>
+
+
+
 
 </body>
 </html>
