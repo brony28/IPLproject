@@ -4,6 +4,11 @@ $user = "root";
 $pass = "";
 $dbname = "attendance";
 
+$usr=$_POST['username'];
+$passd=$_POST['password'];
+$rpassd=$_POST['rpassword'];
+$email=$_POST['email'];
+
 // Create connection
 $conn = new mysqli($servername, $user, $pass, $dbname);
 // Check connection
@@ -11,10 +16,14 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
+<<<<<<< HEAD
 $usr=$_POST['username'];
 $passd=$_POST['password'];
 $rpassd=$_POST['rpassword'];
 $email=$_POST['email'];
+=======
+
+>>>>>>> d1935cf2e6023d5699c53148e8dc01f571868e0f
 
 
 
