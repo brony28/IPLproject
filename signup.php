@@ -11,10 +11,10 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-$usr=$_POST['Username'];
-$passd=$_POST['Password'];
-$rpassd=$_POST['RepeatPassword'];
-$email=$_POST['Email'];
+$usr=$_POST['username'];
+$passd=$_POST['password'];
+$rpassd=$_POST['rpassword'];
+$email=$_POST['email'];
 
 
 
