@@ -16,16 +16,6 @@ if ($conn->connect_error) {
     die("Connection failed: " . $conn->connect_error);
 }
 
-<<<<<<< HEAD
-$usr=$_POST['username'];
-$passd=$_POST['password'];
-$rpassd=$_POST['rpassword'];
-$email=$_POST['email'];
-=======
-
->>>>>>> d1935cf2e6023d5699c53148e8dc01f571868e0f
-
-
 
 $sql = "INSERT INTO signupDB (username, password, rpassword,email)
 VALUES ('$usr','$passd','$rpassd','$email')";
