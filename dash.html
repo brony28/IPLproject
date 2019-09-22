@@ -1,3 +1,10 @@
+<?php
+session_start();
+if(isset($_SESSION['log']))
+{
+
+?>
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -132,7 +139,7 @@
   <a href="homepage.html">Home</a>
   <a href="hover.html">Subjects</a>
   <a href="#">Analysis</a>
-  <a href="loginpage.html" class="right">Logout</a>
+  <a href="homepage.html" class="right">Logout</a>
 </div>
 
 <div class="row">
@@ -198,12 +205,15 @@ function drawChart() {
   Powered by <a href="https://www.fcrit.ac.in" target="_blank">F.C.R.I.T</a>
   </p>
 </div>
-
-
-
-
 </body>
-
 </html>
+<?php
+} 
+else
+{
+    echo "Give proper details";
+    header("refresh:2;url=login.html");
+}
 
+?>
 

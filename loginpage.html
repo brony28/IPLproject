@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 
 
 <!DOCTYPE html>
@@ -47,9 +50,9 @@
     <!-- <div class="title">Attendance Manager</div><br> -->
 
 
-    <form action="dash.html" name=f1>
-    <input id="input" placeholder="Email" class="email" type="email" name="usr" maxlength="50"><br>
-    <input id="input" placeholder="Password" class="password" type="password" name="pswrd" onkeypress="test(event)" maxlength="10"><br>
+    <form action="login.php" name=f1 method="POST">
+    <input id="input" placeholder="Username" class="email" type="text" name="usr" maxlength="50"><br>
+    <input id="input" placeholder="Password" class="password" type="password" name="pswd" onkeypress="test(event)" maxlength="10"><br>
     <!-- <button href="dash.html" class="button">Submit</button><br> -->
     <input class="button" type="submit" value="Submit" onclick="check()">
     <input id="box1" class="checkbox" placeholder="Remember me" type="checkbox">
@@ -63,3 +66,8 @@
 </div>
 </body>
 </html>
+
+<?php
+session_destroy();
+?>
+
