@@ -13,13 +13,13 @@ if($count==1)
 {
     echo "Login Success";
     $_SESSION['log']=1;
-    header("refresh:2;url=dash.html");
+    header("refresh:2;url=dashboard.php");
     
 }
 else
 {
     echo "Give proper details";
-    header("refresh:2;url=loginpage.html");
+    header("refresh:2;url=loginpage.php");
 }
 
 ?>
