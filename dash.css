@@ -58,14 +58,14 @@
   /* Sidebar/left column */
   .side {
     flex: 66%;
-    background-color: #f1f1f1;
+    background-color: #ffc13a;
     padding: 20px;
   }
   
   /* Main column */
   .main {   
     flex: 34%;
-    background-color: rgb(160, 160, 160);
+    background-color:#ffc13a;
     padding: 20px;
   }
   
