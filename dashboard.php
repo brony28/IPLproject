@@ -32,15 +32,15 @@ if(isset($_SESSION['log']))
 
 <div class="row">
   <div class="side">
-    <h2>About Me</h2>
-    <h5>Photo of me:</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text about me in culpa qui officia deserunt mollit anim..</p>
-    <h3>More Text</h3>
-    <p>Lorem ipsum dolor sit ame.</p>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div><br>
-    <div class="fakeimg" style="height:60px;">Image</div>
+    <h2>Today's TimeTable: -</h2>
+    <h5></h5>
+    <div class="fakeimg" style="height:200px;"></div>
+    <p></p>
+    <h3></h3>
+    <p></p>
+    <div class="fakeimg" style="height:60px;"></div><br>
+    <div class="fakeimg" style="height:60px;"></div><br>
+    <div class="fakeimg" style="height:60px;"></div>
   </div>
   <div class="main">
     <h2>Overall Attendance</h2>
@@ -77,8 +77,8 @@ function drawChart() {
     <h2>OVERALL ATTENDANCE</h2>
     <h5>Analysis, Sep 12, 2019</h5>
     <div class="fakeimg" style="height:200px;">Image</div>
-    <p>Some text..</p>
-    <p>Sunt in culpa qui officia deserunt mollit anim id est laborum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+    <p></p>
+    <p></p>
   </div>
 </div>
 
