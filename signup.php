@@ -24,9 +24,11 @@ $count=mysqli_num_rows($checkdb);
 if($count>0)
 {
     echo "USername Already Exists";
+    header("refresh:2;url=Signup.html");
 }
 elseif($passd!=$rpassd){
         echo "Password doesnt match";
+        header("refresh:2;url=Signup.html");
     
 }
 else
