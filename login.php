@@ -2,7 +2,7 @@
 $uname=$_POST['usr'];
 $pword=$_POST['pswd'];
 
-session_start();
+@session_start();
 
 $conn=mysqli_connect("localhost","root","","attendance");
 $result=mysqli_query($conn,"SELECT * FROM signupDB WHERE username='$uname' && password='$pword'");

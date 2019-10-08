@@ -1,27 +1,57 @@
 <?php
-$servername = "localhost";
-$user = "root";
-$pass = "";
-$dbname = "attendance";
 
-$sql1 = "INSERT INTO subjectdb (adsa)
-VALUES ('1')";
-$sql2 = "INSERT INTO sujectdb (mep)
-VALUES ('1')";
-$sql3 = "INSERT INTO subjectdb (ip)
-VALUES ('1')";
-$sql4 = "INSERT INTO subjectdb (cns)
-VALUES ('1')";
-$sql5 = "INSERT INTO subjectdb (admt)
-VALUES ('1')";
+$conn=mysqli_connect("localhost","root","","attendance");
 
-// if($count>0)
-// {
-//     echo "USername Already Exists";
-// }
-// elseif($passd!=$rpassd){
-//         echo "Password doesnt match";
-    
+if($_POST['submit']=='1a'){
+    $sql1=mysqli_query($conn,"INSERT INTO adsadb(value) VALUE (1);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='1b'){
+    $sql1=mysqli_query($conn,"INSERT INTO adsadb(value) VALUE (0);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='2a'){
+    $sql1=mysqli_query($conn,"INSERT INTO mepdb(value) VALUE (1);");
+    header("refresh:2;url=hover.html");
+}
+else if($_POST['submit']=='2b'){
+    $sql1=mysqli_query($conn,"INSERT INTO mepdb(value) VALUE (0);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='3a'){
+    $sql1=mysqli_query($conn,"INSERT INTO ipdb(value) VALUE (1);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='3b'){
+    $sql1=mysqli_query($conn,"INSERT INTO ipdb(value) VALUE (0);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='4a'){
+    $sql1=mysqli_query($conn,"INSERT INTO cnsdb(value) VALUE (1);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='4b'){
+    $sql1=mysqli_query($conn,"INSERT INTO cnsdb(value) VALUE (0);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='5a'){
+    $sql1=mysqli_query($conn,"INSERT INTO admtdb(value) VALUE (1);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='5b'){
+    $sql1=mysqli_query($conn,"INSERT INTO admtdb(value) VALUE (0);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='6a'){
+    $sql1=mysqli_query($conn,"INSERT INTO bcedb(value) VALUE (1);");
+    header("url=hover.html");
+}
+else if($_POST['submit']=='6b'){
+    $sql1=mysqli_query($conn,"INSERT INTO bcedb(value) VALUE (0);");
+    header("url=hover.html");
+}
+
+
 
 
 

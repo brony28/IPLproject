@@ -1,25 +1,21 @@
+  
 <!DOCTYPE html>
 <head>
  <title>Subjects</title>
 </head>
 
 <style type="text/css">
-
-
 *{
  margin: 0px;
  padding: 0px;
 }
-
 body{
  font-family: arial;
  background-color: #dd891a;
 }
 .main{
-
  margin: 2%;
 }
-
 .card{
      width: 20%;
      display: inline-block;
@@ -28,27 +24,22 @@ body{
      border-radius: 5px; 
      margin: 2%;
     }
-
 /* .image img{
   width: 100%;
   border-top-right-radius: 5px;
   border-top-left-radius: 5px;
    */
-
  
  }
-
 .title{
  
   /* text-align: center; */
   padding: 10px;
   
  }
-
 h1{
   font-size: 20px;
  }
-
 .des{
   padding: 3px;
   text-align: center;
@@ -71,7 +62,6 @@ button:hover{
   transition: .5s;
   cursor: pointer;
 }
-
 </style>
 <body>
  <!--cards -->
@@ -89,8 +79,10 @@ Advaned Data Structures</h1>
 <div class="des">
  <p><b>
 Mrs. Lakshmi Gadhikar<br><br></b></p>
-<button type="submit" formaction="attendb.php" formmethod="POST">Lecture Attended</button>
-<button type="submit" formaction="#">Lecture Missed</button>
+<form action="attendb.php" method="POST">
+<button name='submit' value="1a">Lecture Attended</button>
+<button name="submit" value="1b">Lecture Missed</button>
+</form>
 </div>
 </div>
 <!--cards -->
@@ -109,8 +101,10 @@ Microprossessor and Embedded Programs</h1>
 <div class="des">
 <p><b>
 Mr. Suraj Khandare<br><br></b></p>
-<button type="submit" formaction="attendb.php" formmethod="POST">Lecture Attended</button>
-<button type="submit" formaction="#">Lecture Missed</button>
+<form action="attendb.php" method="POST">
+<button name="submit" value="2a">Lecture Attended</button>
+<button name="submit" value="2b">Lecture Missed</button>
+</form>
 </div>
 </div>
 <!--cards -->
@@ -128,8 +122,10 @@ Internet Programming</h1>
 <div class="des">
 <p><b>
 Mrs. Kalpana Wani<br><br><br></b></p>
-<button type="submit" formaction="attendb.php" formmethod="POST">Lecture Attended</button>
-<button type="submit" formaction="#">Lecture Missed</button>
+<form action="attendb.php" method="POST">
+<button name="submit" value="3a">Lecture Attended</button>
+<button name="submit" value="3b">Lecture Missed</button>
+</form>
 </div>
 </div>
 <!--cards -->
@@ -145,10 +141,11 @@ Mrs. Kalpana Wani<br><br><br></b></p>
  <h1>Cryptography And Network Security</h1>
 </div>
 <div class="des">
-    <p><b>Mr. Imran Jamadar
-    <br><br></b></p>
-    <button type="submit" formaction="attendb.php" formmethod="POST">Lecture Attended</button>
-<button type="submit" formaction="#">Lecture Missed</button>
+<p><b>Mr. Imran Jamadar<br><br></b></p>
+<form action="attendb.php" method="POST">
+<button name="submit" value="4a">Lecture Attended</button>
+<button name="submit" value="4b">Lecture Missed</button>
+</form>
 </div>
 </div>
 <!--cards -->
@@ -167,10 +164,31 @@ Advaned Database Management Technique</h1>
 <div class="des">
     <p><b>
 Mrs. Poonam Bari<br><br></b></p>
-<button type="submit" formaction="attendb.php" formmethod="POST">Lecture Attended</button>
-<button type="submit" formaction="#">Lecture Missed</button>
+<form action="attendb.php" method="POST">
+<button name="submit" value="5a">Lecture Attended</button>
+<button name="submit" value="5b">Lecture Missed</button>
+</form>
 </div>
 </div>
+
+<div class="card">
+  <div class="title">
+   <h1>
+  Business Communication and Ethics</h1>
+  </div>
+  <div class="des">
+  <p><b>
+  Mrs. Audrey Correia<br><br></b></p>
+  <form action="attendb.php" method="POST">
+  <button name="submit" value="6a">Lecture Attended</button>
+  <button name="submit" value="6b">Lecture Missed</button>
+  </form>
+  </div>
+  </div>
+  <!--cards -->
+
+
+
 
 </body>
 </html>
