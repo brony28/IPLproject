@@ -1,8 +1,10 @@
 <?php
-session_start();
-if(isset($_SESSION['log']))
-{
-
+$connect = mysqli_connect("localhost", "root", "", "attendance");
+// $query = "SELECT COUNT(*) FROM test WHERE value = '1';";
+$query = "SELECT value, count(*) as number FROM test GROUP BY value";
+$result = mysqli_query($connect, $query);
+// $count=mysqli_num_rows($result);
+//echo $result;
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,29 @@ if(isset($_SESSION['log']))
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="anlys.css">
-
+<script type= "text/javascript" scr="https://www.gstatic.com/charts/loader.js"></script>
+<script type= "text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart()
+{
+  var data = google.visualization.arryToDataTable([
+    ['value'],
+    <?php
+    while($row = mysqli_fetch_array($count))
+      {
+        echo "['".$row["value"]."', ".$row["number"]."],";
+      }
+      ?>
+    ]);
+    var option = {
+      title:'Attendance',
+      pieHole: 0.4 
+    };
+    var chart = new google.visualization.Piechart(document.getElelmentById('piechart'));
+    chart.draw(data, option);
+}
+</script>
 </head>
 <body>
 
@@ -29,7 +53,13 @@ if(isset($_SESSION['log']))
   <a href="analysis.html">Analysis</a>
   <a href="homepage.html" class="right">Logout</a>
 </div>
-
+<div style="width:900px;">  
+                <h3 align="center">My Attendance</h3>  
+                <br />  
+                <div id="piechart" style="width: 900px; height: 500px;"></div>  
+           </div> 
+<!-- <script type= "text/javascript" scr="https://www.gstatic.com/charts/loader.js"></script> -->
+<!--  -->
 <div class="footer">
     <h2>Contact</h2>
     <a href="http://www.facebook.com"><i class="fa fa-facebook-official"></i></a>
@@ -43,13 +73,3 @@ if(isset($_SESSION['log']))
   </div>
   </body>
   </html>
-  <?php
-  } 
-  else
-  {
-      echo "Give proper details";
-      header("refresh:2;url=loginpage.php");
-  }
-  
-  ?>
-  
