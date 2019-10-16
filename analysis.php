@@ -1,7 +1,7 @@
 <?php
 $connect = mysqli_connect("localhost", "root", "", "attendance");
 // $query = "SELECT COUNT(*) FROM test WHERE value = '1';";
-$query = "SELECT value, count(*) as number FROM test GROUP BY value";
+$query = "SELECT attend, count(*) as number FROM test GROUP BY attend";
 $result = mysqli_query($connect, $query);
 // $count=mysqli_num_rows($result);
 //echo $result;
@@ -17,28 +17,6 @@ $result = mysqli_query($connect, $query);
 <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="anlys.css">
 <script type= "text/javascript" scr="https://www.gstatic.com/charts/loader.js"></script>
-<script type= "text/javascript">
-google.charts.load('current', {'packages':['corechart']});
-google.charts.setOnLoadCallback(drawChart);
-function drawChart()
-{
-  var data = google.visualization.arryToDataTable([
-    ['value'],
-    <?php
-    while($row = mysqli_fetch_array($count))
-      {
-        echo "['".$row["value"]."', ".$row["number"]."],";
-      }
-      ?>
-    ]);
-    var option = {
-      title:'Attendance',
-      pieHole: 0.4 
-    };
-    var chart = new google.visualization.Piechart(document.getElelmentById('piechart'));
-    chart.draw(data, option);
-}
-</script>
 </head>
 <body>
 
@@ -60,6 +38,34 @@ function drawChart()
            </div> 
 <!-- <script type= "text/javascript" scr="https://www.gstatic.com/charts/loader.js"></script> -->
 <!--  -->
+ <div class="main">
+    <h2>Overall Attendance</h2>
+    <h5>Analysis, Sept 12, 2019</h5>
+    <div id="piechart"></div>
+
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type= "text/javascript">
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+function drawChart()
+{
+  var data = google.visualization.arryToDataTable([
+    ['Attendance','Number'],
+    <?php
+    while($row = mysqli_fetch_array($result))
+      {
+        echo "['".$row["attend"]."', ".$row["number"]."],";
+      }
+      ?>
+    ]);
+    var options = {
+      title:'Attendance',
+      pieHole: 0.4 ,
+    };
+    var chart = new google.visualization.Piechart(document.getElelmentById('piechart'));
+    chart.draw(data, options);
+}
+</script>
 <div class="footer">
     <h2>Contact</h2>
     <a href="http://www.facebook.com"><i class="fa fa-facebook-official"></i></a>
