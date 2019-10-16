@@ -24,7 +24,7 @@ if(isset($_SESSION['log']))
 </div>
 
 <div class="navbar">
-  <a href="homepage.html">Home</a>
+  <a href="dashbaord.php">Dashboard</a>
   <a href="hover.html">Subjects</a>
   <a href="analysis.php">Analysis</a>
   <a href="homepage.html" class="right">Logout</a>
