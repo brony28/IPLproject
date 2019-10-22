@@ -13,6 +13,7 @@ if($count==1)
 {
     echo "Login Success";
     $_SESSION['log']=1;
+    $_SESSION['user']=$uname;
     header("refresh:2;url=dashboard.php");
     
 }

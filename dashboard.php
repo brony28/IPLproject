@@ -1,8 +1,9 @@
 <?php
-session_start();
+@session_start();
+$conn=mysqli_connect("localhost","root","","attendance");
 if(isset($_SESSION['log']))
 {
-
+// echo $_SESSION['user'];
 ?>
 
 <!DOCTYPE html>
@@ -20,13 +21,16 @@ if(isset($_SESSION['log']))
 
 <div class="header">
   <h1>Attendance Manager</h1>
+  <h2>Welcome <?php echo $_SESSION['user']; ?></h2>
   <p>Don't go Below 75%.</p>
 </div>
 
 <div class="navbar">
-  <a href="homepage.html">Home</a>
+  <a href="dashboard.php">DashBoard</a>
   <a href="hover.html">Subjects</a>
-  <a href="#">Analysis</a>
+  <a href="analysis.php">Analysis</a>
+  <!-- <h2>Welcome <?php echo $_SESSION['user']; ?></h2> -->
+
   <a href="homepage.html" class="right">Logout</a>
 </div>
 
@@ -55,24 +59,56 @@ google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
 
 // Draw the chart and set the chart values
-function drawChart() {
+<?php
+$sel_adsa=mysqli_query($conn,"select * from adsadb");
+$row_adsa=mysqli_fetch_array($sel_adsa);
+$a=$row_adsa['srno'];
+$b=$row_adsa['value'];
+$p=($a/$b)*100;
+
+$sel_ads=mysqli_query($conn,"select * from admtdb");
+$row_ads=mysqli_fetch_array($sel_ads);
+$c=$row_ads['srno'];
+$d=$row_ads['value'];
+$q=($c/$d)*100;
+
+$sel_ad=mysqli_query($conn,"select * from mepdb");
+$row_ad=mysqli_fetch_array($sel_ad);
+$e=$row_ad['srno'];
+$f=$row_ad['value'];
+$r=($e/$f)*100;
+
+$sel_a=mysqli_query($conn,"select * from ipdb");
+$row_a=mysqli_fetch_array($sel_a);
+$g=$row_a['srno'];
+$h=$row_a['value'];
+$s=($g/$h)*100;
+
+$sel_adsaw=mysqli_query($conn,"select * from cnsdb");
+$row_adsaw=mysqli_fetch_array($sel_adsaw);
+$i=$row_adsaw['srno'];
+$j=$row_adsaw['value'];
+$t=($i/$j)*100;
+
+echo "function drawChart() {
   var data = google.visualization.arrayToDataTable([
-  ['Task', 'Hours per Day'],
-  ['ADMT', 10],
-  ['IP', 2],
-  ['CNS', 4],
-  ['ADSA', 2],
-  ['MEP', 8]
+  ['Subjects', 'Individual Attendance'],
+  ['ADMT', $q],
+  ['IP', $s],
+  ['CNS', $t],
+  ['ADSA', $p],
+  ['MEP', $r]
 ]);
 
   // Optional; add a title and set the width and height of the chart
   var options = {'title':'My Attendance', 'width':410, 'height':320};
 
-  // Display the chart inside the <div> element with id="piechart"
+  // Display the chart inside the <div> element with id='piechart'
   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
   chart.draw(data, options);
 }
-</script>
+</script>";
+?>
 <br>
     <h2>OVERALL ATTENDANCE</h2>
     <h5>Analysis, Sep 12, 2019</h5>
