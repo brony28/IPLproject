@@ -3,10 +3,7 @@
 $conn=mysqli_connect("localhost","root","","attendance");
 if(isset($_SESSION['log']))
 {
-
 ?>
-
-
 
 <!DOCTYPE html>
 <html>
@@ -17,11 +14,8 @@ if(isset($_SESSION['log']))
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link href='https://fonts.googleapis.com/css?family=Alef' rel='stylesheet'>
 <link rel="stylesheet" type="text/css" href="anlys.css">
-
 <link rel="stylesheet" type="text/css" href="hover.css">
-
-<link rel="stylesheet" type="text/css" href="hover.css">
-
+<!-- <link rel="stylesheet" type="text/css" href="hover.css"> -->
 </head>
 <body>
 
@@ -31,26 +25,14 @@ if(isset($_SESSION['log']))
 </div>
 
 <div class="navbar">
-  <a href="homepage.html">Home</a>
+  <a href="dashboard.php">Home</a>
   <a href="hover.html">Subjects</a>
-  <a href="analysis.html">Analysis</a>
+  <a href="analysis.php">Analysis</a>
   <a href="homepage.html" class="right">Logout</a>
 </div>
 
 
-
-
-
-
-
-
-
 <div class="card" style="width:500px;">
-
-<!-- <div class="image">
- <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/85/Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg/1199px-Gfp-missouri-st-louis-clubhouse-pond-and-scenery.jpg">
-   <img class="prodimage" src="images/a_pic-1.jpg" width=300 height=200 alt="Ae gayab">
-</div> -->
 <div class="title">
  <h1>
 Advaned Data Structures</h1>
@@ -58,19 +40,12 @@ Advaned Data Structures</h1>
 <div class="des">
  <p><b>
 Mrs. Lakshmi Gadhikar<br><br></b></p>
-
-
-
-    
     <div id="piechart"></div>
-
 <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-
 <script type="text/javascript">
 // Load google charts
 google.charts.load('current', {'packages':['corechart']});
 google.charts.setOnLoadCallback(drawChart);
-
 // Draw the chart and set the chart values
 <?php
 $sel_adsa=mysqli_query($conn,"select * from adsadb");
@@ -78,7 +53,6 @@ $row_adsa=mysqli_fetch_array($sel_adsa);
 $a=$row_adsa['srno'];
 $b=$row_adsa['value'];
 $p=($b-$a);
-
 echo "function drawChart() {
   var data = google.visualization.arrayToDataTable([
   ['Category', ' Attendance'],
@@ -86,29 +60,21 @@ echo "function drawChart() {
   ['Present', $a],
   
 ]);
-
   // Optional; add a title and set the width and height of the chart
   var options = {'title':'My Attendance', 'width':410, 'height':320};
-
   // Display the chart inside the <div> element with id='piechart'
   var chart = new google.visualization.PieChart(document.getElementById('piechart'));
   chart.draw(data, options);
 }
 </script>";
 ?>
-
-
 </div>
 </div>
+
+
+
 <!--cards -->
-
-
-<div class="card">
-
-<!-- <div class="image">
-   <img src="https://cdn.pixabay.com/photo/2018/01/09/03/49/the-natural-scenery-3070808_1280.jpg">
-   <img class="prodimage" src="images/a_pic-2.jpg" width=300 height=200 alt="Ae gayab">
-</div> -->
+<div class="card" style="width:500px;">
 <div class="title">
  <h1>
 Microprossessor and Embedded Programs</h1>
@@ -116,20 +82,41 @@ Microprossessor and Embedded Programs</h1>
 <div class="des">
 <p><b>
 Mr. Suraj Khandare<br><br></b></p>
-<form action="attendb.php" method="POST">
-<button name="submit" value="2a">Lecture Attended</button>
-<button name="submit" value="2b">Lecture Missed</button>
-</form>
+<div id="piechart2"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+// Draw the chart and set the chart values
+<?php
+$sel_mep=mysqli_query($conn,"select * from mepdb");
+$row_mep=mysqli_fetch_array($sel_mep);
+$c=$row_mep['srno'];
+$d=$row_mep['value'];
+$q=($d-$c);
+echo "function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Category', ' Attendance'],
+  ['Absent', $q],
+  ['Present', $c],
+  
+]);
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Attendance', 'width':410, 'height':320};
+  // Display the chart inside the <div> element with id='piechart'
+  var chart = new google.visualization.PieChart(document.getElementById('piechart2'));
+  chart.draw(data, options);
+}
+</script>";
+?>
 </div>
 </div>
 <!--cards -->
 
 
-<div class="card">
 
-<!-- <div class="image">
-   <img src="/crit/images/a_pic-4.jpg" width=300 height=200 alt="Ae gayab">
-</div> -->
+<div class="card" style="width:500px;">
 <div class="title">
  <h1>
 Internet Programming</h1>
@@ -137,41 +124,80 @@ Internet Programming</h1>
 <div class="des">
 <p><b>
 Mrs. Kalpana Wani<br><br><br></b></p>
-<form action="attendb.php" method="POST">
-<button name="submit" value="3a">Lecture Attended</button>
-<button name="submit" value="3b">Lecture Missed</button>
-</form>
+<div id="piechart3"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+// Draw the chart and set the chart values
+<?php
+$sel_ip=mysqli_query($conn,"select * from ipdb");
+$row_ip=mysqli_fetch_array($sel_ip);
+$e=$row_ip['srno'];
+$f=$row_ip['value'];
+$r=($f-$e);
+echo "function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Category', ' Attendance'],
+  ['Absent', $r],
+  ['Present', $e],
+  
+]);
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Attendance', 'width':410, 'height':320};
+  // Display the chart inside the <div> element with id='piechart'
+  var chart = new google.visualization.PieChart(document.getElementById('piechart3'));
+  chart.draw(data, options);
+}
+</script>";
+?>
 </div>
 </div>
 <!--cards -->
 
 
-<div class="card">
-
-<!-- <div class="image">
- <img src="https://cdn.pixabay.com/photo/2018/01/09/03/49/the-natural-scenery-3070808_1280.jpg">
-  <img src="images/a_pic-4.jpg" width=300 height=200 alt="Ae gayab">
-</div> -->
+<div class="card" style="width:500px;">
 <div class="title">
  <h1>Cryptography And Network Security</h1>
 </div>
 <div class="des">
 <p><b>Mr. Imran Jamadar<br><br></b></p>
-<form action="attendb.php" method="POST">
-<button name="submit" value="4a">Lecture Attended</button>
-<button name="submit" value="4b">Lecture Missed</button>
-</form>
+<div id="piechart4"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+// Draw the chart and set the chart values
+<?php
+$sel_cns=mysqli_query($conn,"select * from cnsdb");
+$row_cns=mysqli_fetch_array($sel_cns);
+$g=$row_cns['srno'];
+$h=$row_cns['value'];
+$s=($h-$g);
+echo "function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Category', ' Attendance'],
+  ['Absent', $s],
+  ['Present', $h],
+  
+]);
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Attendance', 'width':410, 'height':320};
+  // Display the chart inside the <div> element with id='piechart'
+  var chart = new google.visualization.PieChart(document.getElementById('piechart4'));
+  chart.draw(data, options);
+}
+</script>";
+?>
 </div>
 </div>
+
+
+
 <!--cards -->
-
-
-<div class="card">
-
-<!-- <div class="image">
-<img src="https://cdn.pixabay.com/photo/2018/01/09/03/49/the-natural-scenery-3070808_1280.jpg">
-   <img src="images/newfoot4.jpg" width=300 height=200 alt="Ae gayab">
-</div> -->
+<div class="card" style="width:500px;">
 <div class="title">
  <h1>
 Advaned Database Management Technique</h1>
@@ -179,14 +205,40 @@ Advaned Database Management Technique</h1>
 <div class="des">
     <p><b>
 Mrs. Poonam Bari<br><br></b></p>
-<form action="attendb.php" method="POST">
-<button name="submit" value="5a">Lecture Attended</button>
-<button name="submit" value="5b">Lecture Missed</button>
-</form>
+<div id="piechart5"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+// Draw the chart and set the chart values
+<?php
+$sel_admt=mysqli_query($conn,"select * from admtdb");
+$row_admt=mysqli_fetch_array($sel_admt);
+$i=$row_admt['srno'];
+$j=$row_admt['value'];
+$t=($j-$i);
+echo "function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Category', ' Attendance'],
+  ['Absent', $t],
+  ['Present', $i],
+  
+]);
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Attendance', 'width':410, 'height':320};
+  // Display the chart inside the <div> element with id='piechart'
+  var chart = new google.visualization.PieChart(document.getElementById('piechart5'));
+  chart.draw(data, options);
+}
+</script>";
+?>
 </div>
 </div>
 
-<div class="card">
+
+
+<div class="card" style="width:500px;">
   <div class="title">
    <h1>
   Business Communication and Ethics</h1>
@@ -194,21 +246,36 @@ Mrs. Poonam Bari<br><br></b></p>
   <div class="des">
   <p><b>
   Mrs. Audrey Correia<br><br></b></p>
-  <form action="attendb.php" method="POST">
-  <button name="submit" value="6a">Lecture Attended</button>
-  <button name="submit" value="6b">Lecture Missed</button>
-  </form>
+  <div id="piechart6"></div>
+<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+<script type="text/javascript">
+// Load google charts
+google.charts.load('current', {'packages':['corechart']});
+google.charts.setOnLoadCallback(drawChart);
+// Draw the chart and set the chart values
+<?php
+$sel_bce=mysqli_query($conn,"select * from bcedb");
+$row_bce=mysqli_fetch_array($sel_bce);
+$k=$row_bce['srno'];
+$l=$row_bce['value'];
+$u=($l-$k);
+echo "function drawChart() {
+  var data = google.visualization.arrayToDataTable([
+  ['Category', ' Attendance'],
+  ['Absent', $u],
+  ['Present', $k],
+  
+]);
+  // Optional; add a title and set the width and height of the chart
+  var options = {'title':'My Attendance', 'width':410, 'height':320};
+  // Display the chart inside the <div> element with id='piechart'
+  var chart = new google.visualization.PieChart(document.getElementById('piechart6'));
+  chart.draw(data, options);
+}
+</script>";
+?>
   </div>
   </div>
-
-
-
-
-
-
-
-
-
 <div class="footer">
     <h2>Contact</h2>
     <a href="http://www.facebook.com"><i class="fa fa-facebook-official"></i></a>
@@ -231,4 +298,3 @@ Mrs. Poonam Bari<br><br></b></p>
   }
   
   ?>
-  

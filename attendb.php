@@ -11,7 +11,8 @@ if($_POST['submit']=='1a'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update adsadb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+    header("refresh:2;url=hover.html");}
 }
 else if($_POST['submit']=='1b'){
     $sql2=mysqli_query($conn,"select * from adsadb");
@@ -22,7 +23,10 @@ else if($_POST['submit']=='1b'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update adsadb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   // echo" <script>window.open('hover.html')</script>"; 
+        echo "Successfully Marked"; 
+         header("refresh:2;url=hover.html");
+    }
 }
 else if($_POST['submit']=='2a'){
     $sql3=mysqli_query($conn,"select * from mepdb");
@@ -33,7 +37,8 @@ else if($_POST['submit']=='2a'){
     $tot_att=$tot_att+1;
     $sql3=mysqli_query($conn,"update mepdb set srno='$srno', value='$tot_att'");
     if($sql3){
-   echo" <script>window.open('hover.html')</script>"; }
+  echo "Successfully Marked"; 
+      header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO mepdb(value) VALUE (1);");
     // header("refresh:2;url=hover.html");
 }
@@ -46,7 +51,8 @@ else if($_POST['submit']=='2b'){
     $tot_att=$tot_att+1;
     $sql3=mysqli_query($conn,"update mepdb set srno='$srno', value='$tot_att'");
     if($sql3){
-   echo" <script>window.open('hover.html')</script>"; }
+  echo "Successfully Marked"; 
+      header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO mepdb(value) VALUE (0);");
     // header("url=hover.html");
 }
@@ -59,7 +65,8 @@ else if($_POST['submit']=='3a'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update ipdb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+       header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO ipdb(value) VALUE (1);");
     // header("url=hover.html");
 }
@@ -72,7 +79,8 @@ else if($_POST['submit']=='3b'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update ipdb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+       header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO ipdb(value) VALUE (0);");
     // header("url=hover.html");
 }
@@ -85,7 +93,8 @@ else if($_POST['submit']=='4a'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update cnsdb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+       header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO cnsdb(value) VALUE (1);");
     // header("url=hover.html");
 }
@@ -98,7 +107,8 @@ else if($_POST['submit']=='4b'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update cnsdb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+       header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO cnsdb(value) VALUE (0);");
     // header("url=hover.html");
 }
@@ -111,7 +121,8 @@ else if($_POST['submit']=='5a'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update admtdb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+       header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO admtdb(value) VALUE (1);");
     // header("url=hover.html");
 }
@@ -124,7 +135,8 @@ else if($_POST['submit']=='5b'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update admtdb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+       header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO admtdb(value) VALUE (0);");
     // header("url=hover.html");
 }
@@ -137,7 +149,8 @@ else if($_POST['submit']=='6a'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update bcedb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+       header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO bcedb(value) VALUE (1);");
     // header("url=hover.html");
 }
@@ -150,7 +163,8 @@ else if($_POST['submit']=='6b'){
     $tot_att=$tot_att+1;
     $sql1=mysqli_query($conn,"update bcedb set srno='$srno', value='$tot_att'");
     if($sql1){
-   echo" <script>window.open('hover.html')</script>"; }
+   echo "Successfully Marked"; 
+       header("refresh:2;url=hover.html"); }
     // $sql1=mysqli_query($conn,"INSERT INTO bcedb(value) VALUE (0);");
     // header("url=hover.html");
 }
