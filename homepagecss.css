@@ -1,9 +1,48 @@
 body{
     padding: 0;
     margin: 0;
-    background: cyan;
+    background: #ffc13a;
     background-size: cover;
+    font-family: Arial, Helvetica, sans-serif, 'Alef';
 }
+.header {
+    padding: 30px;
+    text-align: center;
+    background: #ffc13a;
+    color: black;
+  }
+  
+  /* Increase the font size of the h1 element */
+  .header h1 {
+    font-size: 40px;
+  }
+  
+.navbar {
+    overflow: hidden;
+    background-color: #333;
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+  }
+  
+  /* Right-aligned link */
+  .navbar a.right {
+    float: right;
+  }
+  
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
 .more input{
     /*-webkit-appearance:none;*/
 }
@@ -65,93 +104,6 @@ body{
     transform: translateY(-150px);
 }
 /*==================================================================*/
-
-.all{
-    width: 100%;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 5fr;
-    grid-gap: 50px;
-}
-.page-left{
-    padding: 20px;
-    width: 100%;
-}
-.logo{
-    margin: 0 auto;
-    width:100px;
-    height: 70px;
-    background: url(https://novarademo.files.wordpress.com/2017/08/novara-logo.png);
-    background-size: cover;
-}
-.page-name{
-    font-size: 35px;
-    font-family: verdana;
-    width: 30px;
-    text-align: center;
-    margin: 0 30%;
-}
-.page-info{
-    width: 100px
-    font-size: 14px;
-    margin: 0 30%;
-    text-align: center;
-    color: rgba(0,0,0,.5)
-}
-.line{
-    background-color: #262626;
-    margin: 10px 43% 30px 43%;
-    width: 50px;
-    height:4px;
-}
-.menu{
-    width: 80%;
-}
-.menu li{
-    position: relative;
-    list-style: none;
-    padding-bottom: 15px;
-    padding-top: 15px;
-    border-bottom: 1px solid rgba(0,0,0,.2)
-}
-.menu a{
-    color: #262626;
-    text-decoration: none;
-    font-size: 19px;
-    font-family: sans-serif;
-    padding-left:12px;
-    margin-bottom: 20px;
-    border-left: 1px solid rgba(0,0,0,.3)
-}
-.menu a:hover{
-    border-left: 2px solid rgba(0,0,0,.9)
-}
-.menu ul li ul{
-    display: none;
-}
-.menu ul ul li a,.menu ul ul li{
-    border:none;
-    margin: 0;
-    padding: 0;
-    transition: .5s;
-}
-.menu ul ul li{
-    margin-bottom: 10px;
-    margin-top: 10px;
-}
-.menu ul ul a:hover{
-    border: none;
-    text-decoration: underline;
-}
-.menu ul li:hover ul{
-    display: block;
-    position: absolute;
-    top: 0;
-    left: 100%;
-    width: 150px;
-    background-color: #fff;
-}
-
 /*==================================================================*/
 .page-right{
     cursor: pointer;
@@ -182,7 +134,7 @@ body{
 .page-right-box-1:hover{
     box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
 }
-.page-right-box-2{
+/* .page-right-box-2{
     grid-area: page-right-box-2;
     width: 100%;
     height: 400px;
@@ -260,7 +212,7 @@ body{
 .page-right-box-7:hover{
     box-shadow: inset 500px 500px 500px rgba(0,0,0,.6);
 }
-
+*/
 .name{
     margin-top: 22px;
     color: #ccc;
@@ -327,7 +279,7 @@ body{
     margin-right: -80px;
     font-size: 20px;
     color: rgba(0,0,0,.5);
-}
+} */
 
 footer{
     margin-top: 50px;
@@ -361,3 +313,26 @@ footer{
     margin: 0 auto;
     text-align: center;
 }
+
+.footer {
+    padding: 1px;
+    text-align: center;
+    background: black;
+  }
+
+  .fa {
+    padding: 3px;
+    font-size: 25px;
+    width: 32px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  
+  .fa:hover {
+      opacity: 0.7;
+  }
+  
+.fotext {
+    color: #ccc;
+  }

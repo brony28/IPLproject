@@ -36,23 +36,23 @@ if(isset($_SESSION['log']))
 
 <div class="row">
   <div class="side">
-    <h2>Today's TimeTable: -</h2>
+    <h2>Today's TimeTable:-</h2>
     <h5></h5>
     <div class="fakeimg" style="height:200px;">
-      8:45-9:45 ADMT<br>
+    <b>8:45-9:45 ADMT<br>
     9:45-10:45 CNS<br>
     10:45-11:45 MEP<br>
     11:45-12:30 BREAK/LUNCH TIME<br>
     12:30-1:30 IP<br>
     1:30-2:30 ADSAOA<br>
-    2:30-3:30 PLACEMENTS
+    2:30-3:30 PLACEMENTS</b>
     </div>
     
     <h3>Submissions</h3>
    
-    <div class="fakeimg" style="height:60px;">MEP Assignment 2<br>CNS Assignment test 2</div><br>
-    <div class="fakeimg" style="height:60px;"></div><br>
-    <div class="fakeimg" style="height:60px;"></div>
+    <div class="fakeimg" style="height:60px;"><b>MEP Assignment 2<br>CNS Assignment test 2</b></div><br>
+    <!-- <div class="fakeimg" style="height:60px;"></div><br>
+    <div class="fakeimg" style="height:60px;"></div> -->
   </div>
   <div class="main">
     <h2>Overall Attendance</h2>
@@ -110,11 +110,6 @@ echo "function drawChart() {
 </script>";
 ?>
 <br>
-    <h2>OVERALL ATTENDANCE</h2>
-    <h5>Analysis, Sep 12, 2019</h5>
-    <div class="fakeimg" style="height:200px;">Image</div>
-    <p></p>
-    <p></p>
   </div>
 </div>
 <div class="footer">

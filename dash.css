@@ -12,8 +12,8 @@
   .header {
     padding: 30px;
     text-align: center;
-    background: #dd891a;
-    color: white;
+    background: #ffc13a;
+    color: black;
   }
   
   /* Increase the font size of the h1 element */
@@ -58,14 +58,14 @@
   /* Sidebar/left column */
   .side {
     flex: 66%;
-    background-color: #ffc13a;
+    background-color: #e6ab2c;
     padding: 20px;
   }
   
   /* Main column */
   .main {   
     flex: 34%;
-    background-color:#ffc13a;
+    background-color:#e6ab2c;
     padding: 20px;
   }
   
@@ -80,7 +80,7 @@
   .footer {
     padding: 1px;
     text-align: center;
-    background: #dd891a;
+    background: #ffc13a;
   }
   
   /* Responsive layout - when the screen is less than 700px wide, make the two columns stack on top of each other instead of next to each other */

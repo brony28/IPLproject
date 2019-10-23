@@ -34,7 +34,7 @@ if(isset($_SESSION['log']))
 
 <div class="card" style="width:500px;">
 <div class="title">
- <h1>
+<h1 style="text-align: center">
 Advaned Data Structures</h1>
 </div>
 <div class="des">
@@ -76,7 +76,7 @@ echo "function drawChart() {
 <!--cards -->
 <div class="card" style="width:500px;">
 <div class="title">
- <h1>
+<h1 style="text-align: center">
 Microprossessor and Embedded Programs</h1>
 </div>
 <div class="des">
@@ -118,7 +118,7 @@ echo "function drawChart() {
 
 <div class="card" style="width:500px;">
 <div class="title">
- <h1>
+<h1 style="text-align: center">
 Internet Programming</h1>
 </div>
 <div class="des">
@@ -159,7 +159,7 @@ echo "function drawChart() {
 
 <div class="card" style="width:500px;">
 <div class="title">
- <h1>Cryptography And Network Security</h1>
+<h1 style="text-align: center">Cryptography And Network Security</h1>
 </div>
 <div class="des">
 <p><b>Mr. Imran Jamadar<br><br></b></p>
@@ -199,8 +199,7 @@ echo "function drawChart() {
 <!--cards -->
 <div class="card" style="width:500px;">
 <div class="title">
- <h1>
-Advaned Database Management Technique</h1>
+ <h1><h1 style="text-align: center">Advaned Database Management Technique</h1>
 </div>
 <div class="des">
     <p><b>
@@ -240,7 +239,7 @@ echo "function drawChart() {
 
 <div class="card" style="width:500px;">
   <div class="title">
-   <h1>
+  <h1 style="text-align: center">
   Business Communication and Ethics</h1>
   </div>
   <div class="des">
